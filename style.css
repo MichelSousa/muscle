@@ -1,0 +1,33 @@
+﻿/*
+	* Theme Name: MusclePrime
+	* Theme URI: http://preview.vicomercial.com.br/default
+	* Author: the VI Solutions team @MatheusLopes
+	* Author URI: http://visolutions.com.br/
+	* Description: A Blank theme for create new themes based on Development VI Solutions standarts.
+	* Version: 1.2
+	* License: Ainda não definida
+	* License URI: Ainda não definida
+	* Tags: multi-purpose, retina-ready, responsive
+*/
+== Changelog ==
+
+= 1.3 =
+* Update no script de validacao do ninja forms para corrigir um bug que foi introduzido depois da ultima atualização
+que fazia com que todos os campos recebam a classe email
+* Update no CSS da validação do ninja forms para corrigir a altura do textarea
+* Update do arquivo do formulário padrão
+* Introdução do script de validação de comentários (documentação será incluida logo)
+
+= 1.2 =
+* Introduzido a entrada no menu de redes sociais.
+* Melhoras na arquitetura e organização de scripts e styles (inclusão da pasta lib para bibliotecas).
+* Atualização do padrão de formulário de contato.
+* Social Share
+* Correções de erros
+
+= 1.1 =
+* Introdução do padrão de validação para o ninja forms.
+
+= 1.0 =
+* Release Inicial.
+teste

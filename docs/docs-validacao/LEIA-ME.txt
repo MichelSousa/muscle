@@ -1,0 +1,3 @@
+Nas configurações do Ninja Forms, na sessão de labels, no campo "Anti-spam error message"
+Adicionar A mensagem desejade dentro de uma span com a classe "captchaerror"
+<span class="captchaerror">Por favor, responda a questão anti-spam corretamente.</span>

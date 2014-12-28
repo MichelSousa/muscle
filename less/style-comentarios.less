@@ -1,0 +1,86 @@
+@import "elements.less";
+
+.padding-0 {
+	padding: 0;
+}
+
+.ninja-forms-form-wrap {
+	form {
+		margin-top: 10px;
+
+		label {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		input,
+		textarea {
+			.border-radius(0, 0, 0, 0);
+			border-color: #a8a8a8;
+			padding: 9px 12px;
+		}
+
+		span {
+			.border-radius(0, 0, 0, 0);
+			border: 0;
+			height: inherit;
+		}
+
+		input[type=text] {
+			background-repeat: no-repeat;
+			background-size: 19px 19px;
+			background-origin: 10px;
+			background-position: 99%;
+		}
+		
+		textarea {
+			background-repeat: no-repeat;
+			background-size: 19px 19px;
+			background-origin: 10px;
+			background-position: 99% 3%;
+		}
+
+		.icon-success {
+			background-image: url('../img/validate-ok.png');
+		}
+
+		.icon-error {
+			background-image: url('../img/validate-not-ok.png');
+		}
+
+		.submit {
+			border: 0px;
+			margin-left: 0;
+			background-color: #249f35;
+			border-bottom: 5px solid #1c7528;
+			font-weight: bold;
+			color: #fff;
+			margin-bottom: 40px;
+			outline: 0;
+			.box-shadow(0 0 0 #000);
+			.transition(0.1s, ease);
+	
+			&:hover {
+				background-color: #1f8a2e;
+			}
+
+			&:active {
+				-webkit-box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				-moz-box-shadow:    inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				box-shadow:         inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				border-bottom: 2px solid #1c7528;
+			}
+
+			&:disabled {
+				background-color: #ddd;
+				border-bottom: 5px solid #ccc;
+				-webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				-moz-box-shadow:    inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				box-shadow:         inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				&:active {
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,208 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*
+* Padrão formulário de contato VI - 1.1
+* = 1.1 =
+* - Omissão de campos de erro e campos de aviso do ninja forms para maior consistencia de layout.
+* - Melhor estilização da div de carregamento.
+* - Melhora no tratamento de erro e validação em geral.
+*
+* = 1.0 =
+* - Release Inicial.
+*/
+.padding-0 {
+  padding: 0;
+}
+.ninja-forms-cont div[id$="process_msg"] {
+  background: #fff;
+  color: #333;
+  font-weight: 800;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  line-height: 40rem;
+  position: absolute;
+  z-index: 9;
+  margin: auto;
+  text-align: center;
+}
+.ninja-forms-cont .captchaerror {
+  display: none;
+}
+.ninja-forms-cont .ninja-forms-success-msg {
+  position: absolute;
+  top: -50px;
+  background: #249f35;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.ninja-forms-cont .ninja-forms-field-error {
+  margin-top: 10px;
+}
+.ninja-forms-cont .ninja-forms-required-items {
+  margin-bottom: 10px;
+}
+.ninja-forms-form-wrap form {
+  margin-top: 10px;
+}
+.ninja-forms-form-wrap form label {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.ninja-forms-form-wrap form input,
+.ninja-forms-form-wrap form textarea {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-color: #a8a8a8;
+  padding: 9px 12px;
+}
+.ninja-forms-form-wrap form span {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0;
+}
+.ninja-forms-form-wrap form input[type=text] {
+  background-repeat: no-repeat;
+  background-size: 19px 19px;
+  background-origin: 10px;
+  background-position: 99%;
+  border: 1px solid #ccc;
+}
+.ninja-forms-form-wrap form textarea {
+  resize: none;
+  background-repeat: no-repeat;
+  background-size: 19px 19px;
+  background-origin: 10px;
+  background-position: 99% 3%;
+  border: 1px solid #ccc;
+}
+.ninja-forms-form-wrap form .icon-success {
+  background-image: url('../img/validate-ok.png');
+}
+.ninja-forms-form-wrap form .icon-error {
+  background-image: url('../img/validate-not-ok.png');
+}
+.ninja-forms-form-wrap form .submit-input {
+  width: 100% !important;
+  border: 0px;
+  margin-left: 0 !important;
+  background-color: #249f35;
+  border-bottom: 5px solid #1c7528;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 #000000;
+  -moz-box-shadow: 0 0 0 #000000;
+  box-shadow: 0 0 0 #000000;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.ninja-forms-form-wrap form .submit-input:hover {
+  background-color: #1f8a2e;
+}
+.ninja-forms-form-wrap form .submit-input:active {
+  -webkit-box-shadow: 0 2px 0 #ffffff;
+  -moz-box-shadow: 0 2px 0 #ffffff;
+  box-shadow: 0 2px 0 #ffffff;
+  border-bottom: 2px solid #1c7528;
+}
+.ninja-forms-form-wrap form .submit-input:disabled {
+  background-color: #ddd;
+  border-bottom: 5px solid #ccc;
+  -webkit-box-shadow: 0 0 0 #ffffff;
+  -moz-box-shadow: 0 0 0 #ffffff;
+  box-shadow: 0 0 0 #ffffff;
+}
+.ninja-forms-form-wrap form .submit-input:disabled:active {
+  cursor: not-allowed;
+}
+.ninja-forms-form-wrap form .submit-input {
+  outline: 0;
+}
+.ninja-forms-form-wrap form .submit {
+  border: 0px;
+  margin-left: 0;
+  background-color: #249f35;
+  border-bottom: 5px solid #1c7528;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 #000000;
+  -moz-box-shadow: 0 0 0 #000000;
+  box-shadow: 0 0 0 #000000;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.ninja-forms-form-wrap form .submit:hover {
+  background-color: #1f8a2e;
+}
+.ninja-forms-form-wrap form .submit:active {
+  -webkit-box-shadow: inset 0px 2px 0px 0px #ffffff;
+  -moz-box-shadow: inset 0px 2px 0px 0px #ffffff;
+  box-shadow: inset 0px 2px 0px 0px #ffffff;
+  border-bottom: 2px solid #1c7528;
+}
+.ninja-forms-form-wrap form .submit:disabled {
+  background-color: #ddd;
+  border-bottom: 5px solid #ccc;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
+}
+.ninja-forms-form-wrap form .submit:disabled:active {
+  cursor: not-allowed;
+}

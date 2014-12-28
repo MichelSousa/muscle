@@ -1,0 +1,177 @@
+@import "lib/elements.less";
+
+/*
+* Padrão formulário de contato VI - 1.1
+* = 1.1 =
+* - Omissão de campos de erro e campos de aviso do ninja forms para maior consistencia de layout.
+* - Melhor estilização da div de carregamento.
+* - Melhora no tratamento de erro e validação em geral.
+*
+* = 1.0 =
+* - Release Inicial.
+*/
+
+.padding-0 {
+	padding: 0;
+}
+
+.ninja-forms-cont  {
+	div[id$="process_msg"] {
+		background: #fff;
+		color: #333;
+		font-weight: 800;
+		opacity: 0.4;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		line-height: 40rem;
+		position: absolute;
+		z-index: 9;
+		margin: auto;
+		text-align: center;
+	}
+
+	.captchaerror{
+		display: none;
+	}
+
+	.ninja-forms-success-msg {
+		position: absolute;
+		top: -50px;
+		background: #249f35;
+		color: #fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		.border-radius(4px, 4px, 4px, 4px);
+	}
+
+	.ninja-forms-field-error {
+		margin-top: 10px;
+	}
+
+	.ninja-forms-required-items {
+		margin-bottom: 10px;
+	}
+}
+
+.ninja-forms-form-wrap {
+	form {
+		margin-top: 10px;
+
+		label {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		
+		input,
+		textarea {
+			.border-radius(0, 0, 0, 0);
+			border-color: #a8a8a8;
+			padding: 9px 12px;
+		}
+
+		span {
+			.border-radius(0, 0, 0, 0);
+			border: 0;
+		}
+
+		input[type=text] {
+			background-repeat: no-repeat;
+			background-size: 19px 19px;
+			background-origin: 10px;
+			background-position: 99%;
+			border: 1px solid #ccc;
+		}
+		
+		textarea {
+			resize: none;
+			background-repeat: no-repeat;
+			background-size: 19px 19px;
+			background-origin: 10px;
+			background-position: 99% 3%;
+			border: 1px solid #ccc;
+		}
+
+		.icon-success {
+			background-image: url('../img/validate-ok.png');
+		}
+
+		.icon-error {
+			background-image: url('../img/validate-not-ok.png');
+		}
+		
+		.submit-input {
+			width: 100% !important;
+			border: 0px;
+			margin-left: 0 !important;
+			background-color: #249f35;
+			border-bottom: 5px solid #1c7528;
+			font-weight: bold;
+			color: #fff;
+			outline: none;
+			.box-shadow(0 0 0 #000);
+			.transition(0.1s, ease)
+		}
+		
+		.submit-input:hover {
+			background-color: #1f8a2e;
+		}
+
+		.submit-input:active {
+			.box-shadow(0 2px 0 #fff);
+			border-bottom: 2px solid #1c7528;
+		}
+
+		.submit-input:disabled {
+			background-color: #ddd;
+			border-bottom: 5px solid #ccc;
+			.box-shadow(0 0 0 #fff);
+		}
+
+		.submit-input:disabled:active {
+			cursor: not-allowed;
+		}
+
+		.submit-input {
+			outline: 0;
+		}
+
+		.submit {
+			border: 0px;
+			margin-left: 0;
+			background-color: #249f35;
+			border-bottom: 5px solid #1c7528;
+			font-weight: bold;
+			color: #fff;
+			margin-bottom: 40px;
+			outline: 0;
+			.box-shadow(0 0 0 #000);
+			.transition(0.1s, ease);
+	
+			&:hover {
+				background-color: #1f8a2e;
+			}
+
+			&:active {
+				-webkit-box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				-moz-box-shadow:    inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				box-shadow:         inset 0px 2px 0px 0px rgba(255, 255, 255, 1);
+				border-bottom: 2px solid #1c7528;
+			}
+
+			&:disabled {
+				background-color: #ddd;
+				border-bottom: 5px solid #ccc;
+				-webkit-box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				-moz-box-shadow:    inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				box-shadow:         inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				&:active {
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	
+}
