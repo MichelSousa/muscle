@@ -25,20 +25,17 @@ include "model/model.php";
 
 
 
+/*
+
+ echo '<h1> message :'.   $content .'</h1>';
+ echo '<h1> IDsender :'. $sender_id.'</h1>';
+ echo '<h1> IDrecipients :'.$recipients.'</h1>';
+*/
+
 $model = new Model();
 $model->ConectaDB();
 
 
-
-
-	$sql = "
-	        INSERT INTO 
-	         wp_bp_messages_chat
-	        (receive_id,sender_id,message,date_sent,status_2) VALUES ($recipients,$sender_id,'$message',now(),'not')
-
-	       ";
-
-	$model->Insert($sql);
 
 
 
@@ -169,7 +166,6 @@ $sql_select = "
     endforeach;
 
 
-
   ?>
 
 
@@ -198,47 +194,3 @@ $sql_select = "
 	})
 
 </script>
-
-<!--
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-
-		jQuery(".close").click(function(){
-
-			var conf =confirm("Deseja excluir essa mensagem ?");
-
-			if(conf == true)
-			{
-				   alert("deletar")
-
-				   jQuery.ajax({
-					url:'',
-					type: 'POST',
-					data: {del:"true"},
-					
-					success:function(){
-
-						alert("certo");
-
-					},error:function(){
-
-							alert("errado");
-
-					})
-					
-			}
-
-			else
-			{
-
-				
-
-				
-			}	
-
-		})
-
-	})
-</script>
-
--->

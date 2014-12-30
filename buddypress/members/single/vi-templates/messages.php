@@ -1,3 +1,54 @@
+
+<script type="text/javascript">
+
+		var j = jQuery.noConflict();
+
+		j(document).ready(function(){
+
+							  	postData =  {sender_id: j("#sender_id").val(),
+											
+																	recipients: j("#recipients").val(),
+																	content : j("#message").val(),						
+																	action : j("#acao").val(),
+																	thread_id:j("#thread_id").val()
+											};
+
+
+		 
+		     setInterval(function(){
+
+
+							 	
+					  
+					j.ajax({
+							url:'http://visolutions.com.br/preview/muscleprime/wp-content/themes/muscleprime/php/select_menssage.php',
+							type: 'POST',
+							data: postData
+							
+						})
+
+					   
+						
+						.fail(function() {
+							alert("error");
+						})
+
+						 .done(function(resposta) {
+							 j("#data").html(resposta)
+						})
+
+		        
+		   					}, 2000);
+
+			}) 
+
+
+
+
+</script>
+
+
+
 <?
 	global $current_user;	
 	get_currentuserinfo();
@@ -157,14 +208,3 @@
 </div>
 
 
-<script>
-	jQuery(document).ready(function(){
-
-		jQuery(".close").click(function(){
-
-			alert("ola");
-
-		})
-
-	})
-</script>
